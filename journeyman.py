@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import sys
 import punch_clock
-from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
+from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton
 from PyQt5.QtCore import Qt
 
 class MainWindow(QMainWindow):
@@ -10,11 +10,8 @@ class MainWindow(QMainWindow):
 
         self.setWindowTitle("Journeyman")
 
-        label = QLabel("Welcome to Journeyman.")
-
-        label.setAlignment(Qt.AlignCenter)
-
-        self.setCentralWidget(label)
+        button = QPushButton(text="Punch", parent=self)
+        button.setGeometry(0,0,100,50)
 
 
 app = QApplication(sys.argv)
